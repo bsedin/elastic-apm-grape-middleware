@@ -1,4 +1,4 @@
-# Elastic::Apm::Grape::Middleware
+# ElasticAPM Grape middleware
 
 ## Installation
 
