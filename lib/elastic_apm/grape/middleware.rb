@@ -11,7 +11,8 @@ module ElasticAPM
       # rubocop:disable Metrics/MethodLength
       def call(env)
         begin
-          transaction_name = env['grape.routing_args'][:route_info].pattern.origin
+          route_name = env.dig('grape.routing_args', :route_info)&.pattern&.origin || env['REQUEST_PATH']
+          transaction_name = [env['REQUEST_METHOD'], route_name].join(' ')
 
           transaction = ElasticAPM.transaction transaction_name, 'app',
             context: ElasticAPM.build_context(env)
