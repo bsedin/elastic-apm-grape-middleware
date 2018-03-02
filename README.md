@@ -22,7 +22,7 @@ Or install it yourself as:
 ```ruby
 class Api < Grape::API
   ...
-  use ElasticAPM::Middleware
+  use ElasticAPM::Grape::Middleware
   ...
 end
 ```
@@ -35,7 +35,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/elastic-apm-grape-middleware.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kressh/elastic-apm-grape-middleware.
 
 ## License
 
